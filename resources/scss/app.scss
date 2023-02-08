@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
+a {
+    color: black;
+}
+
 .ms_card {
     width: calc(98% / 3);
     background-color: aliceblue;

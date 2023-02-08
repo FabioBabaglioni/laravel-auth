@@ -30,24 +30,38 @@
     <h1 class="text-center mt-3">Portfolio di Fabio babaglioni</h1>
 
     <h3 class="text-center py-4">Aggiungi un nuovo progetto</h3>
-    <div class="ms_card">
-        <h3>Titolo Azienda</h3>
-        <div>Programmi utilizzati</div>
-        <div>link</div>
-        <div class="d-flex justify-content-between">
-            <a href="">
-                <div class="btn btn-outline-success"> AGGIORNA</div>
-            </a>
 
-            <a href="">
-                <div class="btn btn-outline-primary"> MOSTRA</div>
-            </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome azienda</th>
+                <th scope="col">Programmi utilizzati</th>
+                <th scope="col">Link al sito</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>
+                    <a href="#">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-            <a href="">
-                <div class="btn btn-outline-danger"> CANCELLA</div>
-            </a>
-        </div>
-    </div>
 </div>
 
 @endsection
