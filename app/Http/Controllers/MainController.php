@@ -12,7 +12,7 @@ class MainController extends Controller
 
     }
 
-    public function homeLogIn(){
+    public function homeLogin(){
         return view('pages.home-login');
     }
 }
