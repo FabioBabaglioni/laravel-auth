@@ -17,10 +17,10 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake() -> company(),
-            'description' => fake() -> paragraph(),
-            'release_at' => fake() -> dateTime(),
-            'repo_link' => fake() -> url(),
+            'name' => fake()->company(),
+            'description' => fake()->paragraph(),
+            'release_at' => fake()->dateTime(),
+            'repo_link' => fake()->url(),
         ];
     }
 }
