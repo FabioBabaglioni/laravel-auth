@@ -10,8 +10,14 @@
     <div class="ms_card">
         <h3>Titolo Azienda</h3>
         <div>Programmi utilizzati</div>
-        <div>link</div>
+        <div class="text-center Pt-4">
+            <a href="">
+                <div class="btn btn-outline-primary"> MOSTRA DETTAGLI</div>
+            </a>
+        </div>
+
     </div>
+
 </div>
 
 
