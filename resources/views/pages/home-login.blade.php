@@ -36,18 +36,21 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome azienda</th>
-                <th scope="col">Programmi utilizzati</th>
-                <th scope="col">Link al sito</th>
+                <th scope="col">descrizione</th>
+                <th scope="col">rilasciato il</th>
+                <th scope="col">link repo</th>
                 <th></th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
+            @foreach ($projects as $project)
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row">{{$project -> id}}</th>
+                <td>{{$project -> name}}</td>
+                <td>{{$project -> description}}</td>
+                <td>{{$project -> release_at}}</td>
+                <td>{{$project -> repo_link}}</td>
                 <td>
                     <a href="#">
                         <i class="fa-solid fa-pen-to-square"></i>
@@ -59,6 +62,8 @@
                     </a>
                 </td>
             </tr>
+            @endforeach
+
         </tbody>
     </table>
 

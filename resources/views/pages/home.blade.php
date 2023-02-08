@@ -5,17 +5,21 @@
 @section('content')
 
 <div class="container">
-    <h1 class="text-center mt-3">Portfolio di Fabio babaglioni</h1>
+    <h1 class="text-center my-3">Portfolio di Fabio babaglioni</h1>
 
-    <div class="ms_card">
-        <h3>Titolo Azienda</h3>
-        <div>Programmi utilizzati</div>
-        <div class="text-center Pt-4">
-            <a href="">
-                <div class="btn btn-outline-primary"> MOSTRA DETTAGLI</div>
-            </a>
+    <div class="d-flex flex-wrap justify-content-between">
+        @foreach ($projects as $project)
+        <div class="ms_card mb-4">
+            <h3>{{$project -> name}}</h3>
+            <div>Rilasciato il {{$project -> release_at}}</div>
+            <div class="text-center Pt-4">
+                <a href="">
+                    <div class="btn btn-outline-primary"> MOSTRA DETTAGLI</div>
+                </a>
+            </div>
+
         </div>
-
+        @endforeach
     </div>
 
 </div>
