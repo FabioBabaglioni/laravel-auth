@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [MainController::class, 'home']);
+Route::get('/', [MainController::class, 'home'])
+-> name ('portfolio.home')
+;
 
-Route::get('/modifica', [MainController::class, 'homeLogin'])->middleware(['auth', 'verified']) -> name('homeLogIn');
+Route::get('/modifica', [MainController::class, 'homeLogin'])->middleware(['auth', 'verified']) -> name('portfolio.homeLogin');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
