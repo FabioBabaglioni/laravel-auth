@@ -10,12 +10,14 @@
             {{$project -> description}}
         </div>
 
+        <span>repository link:</span>
         <a href="">
-            <div>repository link: <br> <br>
+            <div>
                 {{$project -> repo_link}}
             </div>
         </a>
-        <div class="my-4">Rilasciato il: {{$project -> release_at}}</div>
+
+        <div class="my-4"> Rilasciato il: {{$project -> release_at}}</div>
         <a href="/">
             <div class="btn btn-outline-primary">INDIETRO</div>
         </a>
