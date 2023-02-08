@@ -4,15 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\project;
+
 class MainController extends Controller
 {
     public function home(){
 
-        return view('pages.home');
+        $projects = project::orderBy('created_at', 'DESC') -> get();
+
+        return view('pages.home', compact('projects'));
 
     }
 
     public function homeLogin(){
-        return view('pages.home-login');
+
+        $projects = project::orderBy('created_at', 'DESC') -> get();
+        
+        return view('pages.home-login', compact('projects'));
     }
+
 }
