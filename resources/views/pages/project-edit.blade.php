@@ -4,7 +4,7 @@
 <div class="container">
     <h2 class="text-center py-3">Aggiorna Progetto</h2>
 
-    <form class="row g-3" method="POST" action="{{route ('project.store')}}">
+    <form class="row g-3" method="POST" action="{{route ('project.update')}}">
         @csrf
         <div class="col-12">
             <label for="name" class="form-label fs-5">Nome Azienda</label>
