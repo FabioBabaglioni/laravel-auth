@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MainController::class, 'home'])
     ->name('project.home');
 
+ Route::get('/portfolio', [MainController::class, 'portfolio'])
+    ->name('project.portfolio');
+
 Route::get('/modifica', [MainController::class, 'homeLogin'])->middleware(['auth', 'verified']) 
 -> name('project.homeLogin');
 

@@ -16,6 +16,14 @@ class MainController extends Controller
 
     }
 
+    public function portfolio(){
+
+        $projects = project::orderBy('created_at', 'DESC') -> get();
+
+        return view('pages.project-portfolio', compact('projects'));
+
+    }
+
     public function homeLogin(){
 
         $projects = project::orderBy('created_at', 'DESC') -> get();
