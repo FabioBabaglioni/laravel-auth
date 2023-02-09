@@ -23,6 +23,8 @@ Route::get('/project/show/{project}', [MainController::class, 'show'])
 
 Route::get('/modifica', [MainController::class, 'homeLogin'])->middleware(['auth', 'verified']) -> name('portfolio.homeLogin');
 
+Route::get('/project/create', [MainController::class, 'create'])->middleware(['auth', 'verified']) -> name('project.create');
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
