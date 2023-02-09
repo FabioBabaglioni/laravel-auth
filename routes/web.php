@@ -16,14 +16,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MainController::class, 'home'])
-    ->name('portfolio.home');
+    ->name('project.home');
 
-Route::get('/project/show/{project}', [MainController::class, 'show'])
--> name ('portfolio.show');
+Route::get('/modifica', [MainController::class, 'homeLogin'])->middleware(['auth', 'verified']) 
+-> name('project.homeLogin');
 
-Route::get('/modifica', [MainController::class, 'homeLogin'])->middleware(['auth', 'verified']) -> name('portfolio.homeLogin');
+Route::get('/project/show/{project}', [MainController::class, 'projectShow'])
+-> name ('project.show');
 
-Route::get('/project/create', [MainController::class, 'create'])->middleware(['auth', 'verified']) -> name('project.create');
+Route::get('/project/create', [MainController::class, 'projectCreate'])->middleware(['auth', 'verified']) 
+-> name('project.create');
+
+Route::post('/project/store', [MainController::class, 'projectStore'])->middleware(['auth', 'verified']) 
+-> name('project.store');
+
+Route::get('/project/delete/{project}', [MainController::class, 'projectDelete'])->middleware(['auth', 'verified']) 
+-> name('project.delete');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

@@ -23,15 +23,43 @@ class MainController extends Controller
         return view('pages.home-login', compact('projects'));
     }
 
-    public function show(project $project){
+    public function projectShow(project $project){
 
         $data = $project;
 
         return view('pages.project-show', compact('project'));
     }
 
-    public function create(){
+    public function projectCreate(){
+
         return view('pages.project-create');
+    }
+
+    public function projectStore(request $request){
+        $data = $request -> validate([
+            'name' => 'required|string|max:32',
+            'description' => 'required|string|max:255',
+            'release_at' => 'required|date|date:today',
+            'repo_link' => 'required|string|max:255',
+        ]);
+    
+        $project = new project();
+    
+        $project -> name = $data['name'];
+        $project -> description = $data['description'];
+        $project -> release_at = $data['release_at'];
+        $project -> repo_link = $data['repo_link'];
+
+        $project -> save();
+    
+        return redirect() -> route('project.homeLogin');
+    }
+
+    public function projectDelete(project $project){
+
+        $project->delete();
+
+        return redirect()->route('project.homeLogin');
     }
 
 }

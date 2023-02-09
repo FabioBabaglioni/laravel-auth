@@ -17,7 +17,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                 </ul>
-                <a href="/">
+                <a href="{{route ('project.home')}}">
                     <div class="btn btn-outline-success">Area pubblica</div>
                 </a>
 
@@ -29,7 +29,9 @@
 <div class="container">
     <h1 class="text-center mt-3">Portfolio di Fabio babaglioni</h1>
 
-    <h3 class="text-center py-4">Aggiungi un nuovo progetto</h3>
+    <a href="{{route('project.create')}}">
+        <h3 class="text-center py-4">Aggiungi un nuovo progetto</h3>
+    </a>
 
     <table class="table">
         <thead>
@@ -50,12 +52,12 @@
                 <td>{{$project -> release_at}}</td>
                 <td>{{$project -> repo_link}}</td>
                 <td>
-                    <a href="{{route('project.create')}}">
+                    <a href="#">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
                 </td>
                 <td>
-                    <a href="#">
+                    <a href="{{route('project.delete', $project)}}">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
                 </td>

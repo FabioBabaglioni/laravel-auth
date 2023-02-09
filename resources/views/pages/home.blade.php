@@ -13,7 +13,7 @@
             <h3>{{$project -> name}}</h3>
             <div>Rilasciato il {{$project -> release_at}}</div>
             <div class="text-center Pt-4">
-                <a href="{{route('portfolio.show', $project)}}">
+                <a href="{{route('project.show', $project)}}">
                     <div class="btn btn-outline-primary"> MOSTRA DETTAGLI</div>
                 </a>
             </div>

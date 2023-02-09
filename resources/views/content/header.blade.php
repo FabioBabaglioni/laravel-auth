@@ -13,7 +13,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                 </ul>
-                <a href="{{route('portfolio.homeLogin')}}">
+                <a href="{{route('project.homeLogin')}}">
                     <div class="btn btn-outline-success">Area riservata</div>
                 </a>
 
