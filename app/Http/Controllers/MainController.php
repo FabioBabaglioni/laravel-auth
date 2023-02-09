@@ -62,4 +62,9 @@ class MainController extends Controller
         return redirect()->route('project.homeLogin');
     }
 
+    public function projectEdit(project $project){
+
+        return view('pages.project-edit', compact('project'));
+    }
+
 }

@@ -33,6 +33,9 @@ Route::post('/project/store', [MainController::class, 'projectStore'])->middlewa
 Route::get('/project/delete/{project}', [MainController::class, 'projectDelete'])->middleware(['auth', 'verified']) 
 -> name('project.delete');
 
+Route::get('/project/edit/{project}', [MainController::class, 'projectEdit'])->middleware(['auth', 'verified']) 
+-> name('project.edit');
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');

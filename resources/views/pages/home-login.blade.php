@@ -52,7 +52,7 @@
                 <td>{{$project -> release_at}}</td>
                 <td>{{$project -> repo_link}}</td>
                 <td>
-                    <a href="#">
+                    <a href="{{route('project.edit', $project)}}">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
                 </td>
