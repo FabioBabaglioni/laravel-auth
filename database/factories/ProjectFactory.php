@@ -20,7 +20,7 @@ class ProjectFactory extends Factory
             'name' => fake()->company(),
             'description' => fake()->paragraph(),
             'release_at' => fake()->dateTime(),
-            'img' => fake()->imageUrl(640, 480, 'animals', true),
+            // 'img' =>null,
             'repo_link' => fake()->url(),
         ];
     }

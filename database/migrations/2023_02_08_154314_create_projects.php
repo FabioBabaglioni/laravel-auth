@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name', 40);
             $table->text('description');
             $table->date('release_at');
-            $table->string('img');
+            $table->string('img') -> default('dino.jpg');
             $table->string('repo_link');
 
             $table->timestamps();

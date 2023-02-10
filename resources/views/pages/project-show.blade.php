@@ -7,7 +7,7 @@
     <div class="ms_singol_card">
         {{-- <img src="{{asset('storage/dino.jpg')}}" alt=""> --}}
         <div class="d-flex justify-content-center pb-3">
-            <img class="img" src="{{$project -> img}}" alt="">
+            <img class="img" src="{{asset('storage/' . $project -> img)}}" alt="">
         </div>
 
         <h4>Lavoro elaborato per {{$project -> name}} S.P.A.</h4>
