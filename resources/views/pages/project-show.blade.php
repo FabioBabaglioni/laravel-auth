@@ -5,10 +5,13 @@
 @section('content')
 <div class="container d-flex justify-content-center">
     <div class="ms_singol_card">
+        <img src="{{asset('storage/dino.jpg')}}" alt="">
         <h4>Lavoro elaborato per {{$project -> name}} S.P.A.</h4>
         <div class="pb-3">descrizione lavoro: <br> <br>
             {{$project -> description}}
         </div>
+
+        <img class="project-img" src="asset('storage/dino.jpg')" alt="">
 
         <span>repository link:</span>
         <a href="">
