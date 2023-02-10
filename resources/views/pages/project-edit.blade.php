@@ -19,6 +19,10 @@
             <input type="date" class="form-control" name="release_at" value="{{$project -> release_at}}">
         </div>
         <div class="col-12">
+            <label for="repo_link" class="form-label fs-5">Img link</label>
+            <input type="text" class="form-control" name="repo_link" value="{{$project -> img}}">
+        </div>
+        <div class="col-12">
             <label for="repo_link" class="form-label fs-5">Repository link</label>
             <input type="text" class="form-control" name="repo_link" value="{{$project -> repo_link}}">
         </div>

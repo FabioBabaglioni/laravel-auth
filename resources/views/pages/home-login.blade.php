@@ -39,6 +39,7 @@
                 <th scope="col">Nome azienda</th>
                 <th scope="col">descrizione</th>
                 <th scope="col">rilasciato il</th>
+                <th scope="col">img link</th>
                 <th scope="col">link repo</th>
                 <th></th>
                 <th></th>
@@ -50,6 +51,7 @@
                 <td>{{$project -> name}}</td>
                 <td>{{$project -> description}}</td>
                 <td>{{$project -> release_at}}</td>
+                <td>{{$project -> img}}</td>
                 <td>{{$project -> repo_link}}</td>
                 <td>
                     <a href="{{route('project.edit', $project)}}">

@@ -11,6 +11,7 @@
         @foreach ($projects as $project)
         <div class="ms_card mb-4">
             <h3>{{$project -> name}}</h3>
+            <div>link img: {{$project -> img}}</div>
             <div>Rilasciato il {{$project -> release_at}}</div>
             <div class="text-center Pt-4">
                 <a href="{{route('project.show', $project)}}">

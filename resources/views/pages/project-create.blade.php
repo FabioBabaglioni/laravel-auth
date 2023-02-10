@@ -19,6 +19,10 @@
             <input type="date" class="form-control" name="release_at">
         </div>
         <div class="col-12">
+            <label for="img" class="form-label fs-5">Img Link</label>
+            <input type="text" class="form-control" name="img">
+        </div>
+        <div class="col-12">
             <label for="repo_link" class="form-label fs-5">Repository link</label>
             <input type="text" class="form-control" name="repo_link">
         </div>
