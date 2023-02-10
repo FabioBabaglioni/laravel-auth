@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\project;
+use Illuminate\Support\Facades\Storage;
 
 class MainController extends Controller
 {
@@ -44,18 +45,26 @@ class MainController extends Controller
     }
 
     public function projectStore(request $request){
+
+
         $data = $request -> validate([
             'name' => 'required|string|max:32',
             'description' => 'required|string|max:255',
             'release_at' => 'required|date|date:today',
+            'img' => 'required|image|mimes:jpg,jpeg,png,jpeg,gif,svg|max:2048',
             'repo_link' => 'required|string|max:255',
         ]);
+
+        $img_path = Storage::put ('uploads', $data['img']);
+
+        $data['img'] = $img_path;
     
         $project = new project();
     
         $project -> name = $data['name'];
         $project -> description = $data['description'];
         $project -> release_at = $data['release_at'];
+        $project -> img = $data['img'];
         $project -> repo_link = $data['repo_link'];
 
         $project -> save();
@@ -87,6 +96,7 @@ class MainController extends Controller
         $project -> name = $data['name'];
         $project -> description = $data['description'];
         $project -> release_at = $data['release_at'];
+        $project -> img = $data['img'];
         $project -> repo_link = $data['repo_link'];
 
         $project -> save();

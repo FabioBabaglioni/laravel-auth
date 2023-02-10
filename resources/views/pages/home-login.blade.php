@@ -51,7 +51,7 @@
                 <td>{{$project -> name}}</td>
                 <td>{{$project -> description}}</td>
                 <td>{{$project -> release_at}}</td>
-                <td>{{$project -> img}}</td>
+                <td> <img class="img" src="{{asset('storage/' . $project -> img)}}" alt=""></td>
                 <td>{{$project -> repo_link}}</td>
                 <td>
                     <a href="{{route('project.edit', $project)}}">
